@@ -1,7 +1,8 @@
 ---
 title: "Win, loss, or even domain: a social comparison analysis"
-author:
-  name: "Michele Garbelotto"
+author: 
+    name: Michele Garbelotto
+    email: garbelotto.michele@email.com
 bibliography: references.bib
 csl: apa.csl
 format:
