@@ -1,0 +1,398 @@
+---
+title: "Win, loss, or even domain: a social comparison analysis"
+author:
+  name: "Michele Garbelotto"
+bibliography: references.bib
+csl: apa.csl
+format:
+  revealjs:
+    self-contained: true
+    slide-number: c/t
+    show-slide-number: all
+    progress: false
+    center: false
+    theme: simple
+    fontsize: 24.5px
+    margin: 0.20
+    width: 1000
+    height: 550
+    css: ChapProg/ChapProg.css
+    include-after-body: ChapProg/ChapProg.js
+execute:
+  echo: false
+---
+
+# Theoretical models of the social comparison field
+
+
+## Core concepts of social comparison 
+
+"[social comparison is] the process of thinking about information about one or more person in relation to the self" [@wood1996, pp. 520–521]
+
+1.  type of standard
+2.  comparison dimension
+3.  comparison direction
+    1.  upward
+    2.  downward
+    3.  lateral
+4.  contrast vs assimilation
+
+
+See Arigo et al. [-@arigo2020][^1].
+
+[^1]: They use the term "identification", instead of "assimilation", and "target" instead of "standard".
+
+## Festinger's Social Comparison Theory[^2] 
+
+[^2]: Crusius et al. [-@crusius2022]
+
+1.  *content* of comparison studied
+    1.  opinion
+    2.  abilities
+2.  *motivational* core
+    1.  drive to accurately evaluate one's opinions and abilities
+3.  tendency to compare with *similar* others, or slightly better others (in the case of abilities)
+    1. "similar" in what sense?
+4.  ... (other hypotheses)
+
+::: notes
+The motivational core is related to Festinger's interest in uncertainty (cognitive dissonance theory). Researchers focused on comparison of ability and comparison at an individual level (no group level)
+:::
+
+## Selective Accessibility Model[^3] (SAM) 
+
+1.  explanatory *objective*: prediction of assimilation and contrast
+2.  selective accessibility mechanism
+    1. *phases*
+       1.  initial broad assessment of similarity
+           1.  perceived dissimilarity $\rightarrow$ dissimilarity hypothesis is tested
+           2.  perceived similarity $\rightarrow$ similarity hypothesis is tested
+    2.  heightened cognitive accessibility
+        1.  similarity hp $\rightarrow$ accessibility of standard-consistent self-knowledge $\rightarrow$ assimilation
+        2.  dissimilarity hp $\rightarrow$ accessibility of standard-inconsistent self-knowledge $\rightarrow$ contrast
+
+[^3]: Mussweiler [-@mussweiler2020]
+
+## SAM
+
+![Selective accessibility mechanism [@mussweiler2020]](img/SAM.png)
+
+## SAM
+
+### Predictions 1
+
+1. *cognitive accessibility* $\rightarrow$ self-evaluation outcome
+    1. manipulation of similarity (different task) $\rightarrow$ assimilation
+    2. manipulation of dissimilarity (different task) $\rightarrow$ contrast
+2. self-evaluation outcome $\rightarrow$ *cognitive accessibility*
+    1. manipulation of comparison target
+        1. similar comparison target $\rightarrow$ focus on similarity (different task)
+        2. dissimilar comparison target $\rightarrow$ focus on dissimilarity (different task)
+        
+## SAM
+### Predictions 2
+
+3. *consequences*
+    1. motivational
+    2. affective [@epstude2009]
+    - e.g., assimilation with higher standard $\rightarrow$ > motivation and similar affect
+4. concept of *similarity*
+    1. self-evaluation: similarity on the critical dimension
+    2. cognitive accessibility: similarity of anything
+        1. e.g., social category, critical dimension, related dimension, etc.
+5. efficiency of similarity testing
+
+        
+::: notes
+Conditions that promotes similarity/dissimilarity
+
+This finding suggests that under conditions that promote
+similarity testing, the accessibility of standard-consistent target knowledge
+is increased. Under conditions that promote dissimilarity testing, however,
+standard-inconsistent knowledge becomes more accessible.
+
+similarity on anything: even what induces the perception of similarity such as ambient warmth
+
+:::
+
+## Attributional comparison models^[Main source: Suls and Wheeler [-@suls2020]]
+
+<div style="height: 10px;"></div>
+
+### Theoretical origin
+
+Related attributes hypothesis [@goethals1977]
+
+<div style="height: 10px;"></div>
+
+### Proxy model [@wheeler1997; @martin2000]
+
+1. how do people predict their performance?
+    1. "can i do X?"
+2. variables
+    1. maximum effort exertion 
+    2. similarity on related attributes
+    - also: perceived similarity of tasks
+    
+## Attributional comparison models
+
+### Triadic model [@suls2000three]
+:::: {.columns}
+
+::: {.column}
+1. types of *opinions*
+    1. value 
+    2. belief 
+    3. mixed-type
+2. preference assessment: "do I like X?"
+    1. comparison with a person with similar values
+3. belief assessment: "is X correct?"
+    1. comparison with an expert
+::: 
+    
+::: {.column}
+4. preference prediction: "will I like X?"
+    1. pattern of agreement or disagreement with the target
+    2. reaction of a person to X
+        1. assuming similarity on related attribute
+5. mixed-type opinion
+    1. comparison with a "similar expert"
+:::
+
+::::
+
+::: notes
+"if we are correct then the cognitive machinery described in the proxy
+and triadic models is activated in ambiguous situations to decide wisely and
+avoid failures, social conflicts, and other adverse events."
+:::
+
+
+## Dimensional Comparison Theory^[Main source: [@helm2020dimensional]]
+
+<div style="height: 10px;"></div>
+
+### Origin
+
+DCT is a theoretical extension of the Internal/External Frame of Reference Model (I/E model) [@marsh1986verbal].
+
+<div style="height: 10px;"></div>
+
+### What is "dimensional comparison"?
+
+Dimensional comparison, like social and temporal comparison, consists in *evaluating* a target by comparing it with a reference standard [@moller2016generalized].
+
+Specifically, in dimensional comparison both the target and the standard are *attributes* of the person making the comparison [@moller2001dimensional].
+
+::: notes
+
+The
+model describes the path-analytic finding that students’ subject-specific
+self-concepts are far less correlated than are their achievements in verbal
+and mathematical areas; at the same time, achievement has positive effects
+on self-concept in the same area and achievement has negative effects on
+self-concept in the noncorresponding area
+
+:::
+
+
+## Dimensional Comparison Theory
+
+### Core questions
+
+:::: {.columns}
+
+::: {.column}
+1. what is the *motivation* behind dimensional comparison?
+    1. self-evaluation (or self-differentiation)
+    2. self-maintenance
+    3. self-enhancement
+    4. self-improvement
+:::
+
+::: {.column}
+2. what *areas* are compared dimensionally?
+    1. comparison between any personal attributes
+    2. three variables
+        1. common context
+        2. similar metric
+        3. perceived importance
+        
+:::
+
+::::
+    
+
+3. what are the *effects* of dimensional comparison?
+    1. contrast $\leftarrow$ belief of negative association
+    2. assimilation $\leftarrow$ belief of positive association
+    3. mood
+
+## Dimensional Comparison Theory
+
+### Generalized I/E Model [@moller2016generalized]
+
+Subsequent extension of DCT  
+
+Main *assumptions*:
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+1. domain extension
+    1. other subjects
+    2. extra-academic domain
+2. causal relation
+    1. predictors extension: domain-characteristics
+    2. criteria extension: domain-specific beliefs and learning behaviors
+
+:::
+
+::: {.column width="50%"}
+
+![](img/GeneralizedIE.png){width=100%}
+
+:::
+
+::::
+
+## Others
+
+1. Downward Comparison Theory [@wills1981downward] $\rightarrow$ proven wrong [@gerber2018]
+2. Construal Theory and Upward Social Comparisons [@collins1996better; @collins2000among] 
+  1. Collins proposed the assimilation vs contrast effects
+  2. It is similar to SAM
+3. Self-Evaluation Maintenance model (SEM) [@tesser1988toward]
+    1. which is different than social comparison [@wheeler2020history]
+4. Social Comparison Orientation [@gibbons1999individual]
+5. local vs general comparison [@zell2020better; @zell2020effects]
+6. vertical vs horizontal comparison $\leftrightarrow$ agentic and communal motives [@locke2014agency]
+7. Social Identity Theory and Self Categorization Theory
+8. Temporal comparison [@wilson2020temporal]
+9. ... 
+
+::: notes
+Construal:
+
+"In this way, Collins’ model is mutually compatible with proxy. Mussweiler presents a similar model (the selective accessibility model), but it is based on cognitive accessibility, not on expectations (see Chapters 1 and 2)."
+
+horizontal comparison:
+
+"An extensive corpus of research suggests that perceived similarities (connective
+comparisons) enhance and perceived dissimilarities (contrastive
+comparisons) undermine warm, positive, empathic, communal feelings toward
+others (Byrne, 1971; Locke, 2003; Montoya, Horton, & Kirchner, 2008)."
+
+:::
+
+# Experimental designs
+
+These designs are taken from Gerber [-@gerber2018] meta-analysis.
+
+## Reaction method
+
+### Type 1
+
+1.  between subject design
+2.  task: gambling task (e.g., roulette)
+3.  conditions: 3X3
+    1.  roulette scenarios
+        1.  the participant gains X amount of money
+        2.  the participant loses X amount of money
+        3.  the participant doesn't lose any money (even)
+    2.  comparison condition
+        1.  comparison with a participant with a lower credit
+        2.  comparison with a participant with a higher credit
+        3.  comparison with a participant with the same credit
+        4.  no comparison scenario (control condition)
+      
+## Reaction method
+
+:::: {.columns}
+
+::: {.column}
+
+3.  dependent variables
+    1.  self-esteem
+    2.  mood
+    4.  empathy toward the standard
+    5.  play intention
+    
+:::
+
+::: {.column}
+
+### Type 2
+
+1.  same structure as type 1.
+2.  different task and dependent variables
+
+:::
+
+::::
+
+### Type 1 vs Type 2
+
+1. difference in self-evaluation
+    1. The outcome of type 1 is based on luck $\rightarrow$ no self-evaluation.
+    2. The outcome of type 2 is based on the ability of the participant $\rightarrow$ self-evaluation
+    
+::: notes
+
+Positive and Negative Affect Schedule
+
+:::
+
+## Field study
+
+1.  sample: gambling addicts
+    1.  online gambling
+    2.  offline gambling
+    3.  online and/or offline
+2.  Self-recorded diary
+    1.  types of procedures
+        1.  *event-contingent*
+        2.  interval-contingent
+        3.  signal-contingent
+3.  request: participants are instructed to complete a *brief questionnaire* on social comparison at the moment they become aware that they are engaging in *social comparison* during the *gambling activity*
+
+## Field study
+
+3. Self-recorded diary
+    2. recorded variables
+        1. "Type of social contact for this comparison"
+        2. "comparison dimension"
+        3. "Whom did you feel you compared with?"
+            1. e.g. immaginary or real person, oneself, close friend, etc.
+        4. Target's sex
+        5. "How similar are you to compared?"
+        6. feelings before and after comparison
+        7. "Please describe why you made this comparison with this
+particular person"
+        8. gain, loss or even domain
+
+
+- instrument: Rochester Social Comparison Record [@wheeler1992social] (variables 1-7)
+
+## Selection method?
+
+# Models' predictions relative to the experimental designs
+
+1. Festinger's Social Comparison Theory $\rightarrow$ no predictions
+2. SAM model
+    1. same category of the standard $\rightarrow$ assimilation
+    2. different category of the standard $\rightarrow$ contrast
+3. attributional models $\rightarrow$ no predictions
+4. Dimensional Comparison Theory $\rightarrow$ no predictions
+
+::: notes
+
+I'm considering only win, loss or even domain predictions
+
+:::
+
+## References
+
+::: {#refs}
+:::

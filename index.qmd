@@ -1,0 +1,15 @@
+---
+title: "index"
+format: 
+  html:
+    self-contained: true
+    toc: true                 
+    toc-location: left      
+    theme:
+      light: minty 
+      dark: superhero
+---
+
+# Social Comparison Project
+
+[Social comparison presentation](SC_Presentation.html)
