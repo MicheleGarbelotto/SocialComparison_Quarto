@@ -268,7 +268,7 @@ Main *assumptions*:
 4. Social Comparison Orientation [@gibbons1999individual]
 5. local vs general comparison [@zell2020better; @zell2020effects]
 6. vertical vs horizontal comparison $\leftrightarrow$ agentic and communal motives [@locke2014agency]
-7. Social Identity Theory and Self Categorization Theory
+7. Social Identity Theory and Self Categorization Theory^[For a brief description see Trepte and Loy [-@trepte2017social]]
 8. Temporal comparison [@wilson2020temporal]
 9. ... 
 
@@ -301,7 +301,7 @@ These designs are taken from Gerber [-@gerber2018] meta-analysis.
         1.  the participant gains X amount of money
         2.  the participant loses X amount of money
         3.  the participant doesn't lose any money (even)
-    2.  comparison condition
+    2.  comparison conditions
         1.  comparison with a participant with a lower credit
         2.  comparison with a participant with a higher credit
         3.  comparison with a participant with the same credit
