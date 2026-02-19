@@ -1,8 +1,7 @@
 ---
 title: "index"
-author: 
-    name: Michele Garbelotto
-    email: garbelotto.michele@email.com
+author: Michele Garbelotto
+email: garbelotto.michele@email.com
 date: today
 format: 
   html:
