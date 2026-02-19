@@ -1,17 +1,14 @@
 ---
 title: "index"
-author:
-  - name: Michele Garbelotto
-    email: garbelotto.michele@email.com
+author: Michele Garbelotto
 date: today
-
 format: 
   html:
     self-contained: true
-    toc: true
-    toc-location: left
+    toc: true                 
+    toc-location: left      
     theme:
-      light: minty
+      light: minty 
       dark: superhero
 ---
 
