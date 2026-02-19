@@ -1,5 +1,5 @@
 ---
-title: "index"
+title: "Social Comparison Project"
 author: Michele Garbelotto
 date: today
 format: 
@@ -12,6 +12,6 @@ format:
       dark: superhero
 ---
 
-# Social Comparison Project
+# Presentations
 
-[Social comparison presentation](SC_Presentation.html)
+[First social comparison presentation](SC_Presentation.html)
