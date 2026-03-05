@@ -25,10 +25,22 @@ execute:
 
 # Theoretical models of the social comparison field
 
-
-## Core concepts of social comparison 
+## What the hell is social comparison?
 
 "[social comparison is] the process of thinking about information about one or more person in relation to the self" [@wood1996, pp. 520–521]
+
+"the cognitive process of evaluating a certain target by comparing it to a certain standard", "social comparisons use information on others as the standard"^[A standard is the person/s to which the individual is comparing to, while a target is a self-attribute] [@moller2016generalized]
+
+### Necessary conditions of social comparison as a theory
+
+1. centrality of self-attributes
+2. evaluation of a target
+  1. self-evaluation as a dependent variable
+3. uncertainty drive
+
+## What the hell is social comparison?
+
+### Some core concepts of social comparison
 
 1.  type of standard
 2.  comparison dimension
@@ -43,9 +55,20 @@ See Arigo et al. [-@arigo2020][^1].
 
 [^1]: They use the term "identification", instead of "assimilation", and "target" instead of "standard".
 
-## Festinger's Social Comparison Theory[^2] 
+## What isn't social comparison
 
-[^2]: Crusius et al. [-@crusius2022]
+1. comparative conclusion
+2. counterfactuals
+3. better than average effect
+4. false consensus effect
+
+### Conclusion
+
+1. the comparative process has to be present
+2. there has to be a comparison feedback
+
+
+## Historical origin: Social Comparison Theory^[Crusius et al. [-@crusius2022]]
 
 1.  *content* of comparison studied
     1.  opinion
@@ -93,15 +116,15 @@ The motivational core is related to Festinger's interest in uncertainty (cogniti
 ## SAM
 ### Predictions 2
 
-3. *consequences*
+1. *consequences*
     1. motivational
     2. affective [@epstude2009]
     - e.g., assimilation with higher standard $\rightarrow$ > motivation and similar affect
-4. concept of *similarity*
+2. concept of *similarity*
     1. self-evaluation: similarity on the critical dimension
     2. cognitive accessibility: similarity of anything
         1. e.g., social category, critical dimension, related dimension, etc.
-5. efficiency of similarity testing
+3. efficiency of similarity testing
 
         
 ::: notes
@@ -168,110 +191,23 @@ and triadic models is activated in ambiguous situations to decide wisely and
 avoid failures, social conflicts, and other adverse events."
 :::
 
-
-## Dimensional Comparison Theory^[Main source: [@helm2020dimensional]]
-
-<div style="height: 10px;"></div>
-
-### Origin
-
-DCT is a theoretical extension of the Internal/External Frame of Reference Model (I/E model) [@marsh1986verbal].
-
-<div style="height: 10px;"></div>
-
-### What is "dimensional comparison"?
-
-Dimensional comparison, like social and temporal comparison, consists in *evaluating* a target by comparing it with a reference standard [@moller2016generalized].
-
-Specifically, in dimensional comparison both the target and the standard are *attributes* of the person making the comparison [@moller2001dimensional].
-
-::: notes
-
-The
-model describes the path-analytic finding that students’ subject-specific
-self-concepts are far less correlated than are their achievements in verbal
-and mathematical areas; at the same time, achievement has positive effects
-on self-concept in the same area and achievement has negative effects on
-self-concept in the noncorresponding area
-
-:::
-
-
-## Dimensional Comparison Theory
-
-### Core questions
-
-:::: {.columns}
-
-::: {.column}
-1. what is the *motivation* behind dimensional comparison?
-    1. self-evaluation (or self-differentiation)
-    2. self-maintenance
-    3. self-enhancement
-    4. self-improvement
-:::
-
-::: {.column}
-2. what *areas* are compared dimensionally?
-    1. comparison between any personal attributes
-    2. three variables
-        1. common context
-        2. similar metric
-        3. perceived importance
-        
-:::
-
-::::
-    
-
-3. what are the *effects* of dimensional comparison?
-    1. contrast $\leftarrow$ belief of negative association
-    2. assimilation $\leftarrow$ belief of positive association
-    3. mood
-
-## Dimensional Comparison Theory
-
-### Generalized I/E Model [@moller2016generalized]
-
-Subsequent extension of DCT  
-
-Main *assumptions*:
-
-:::: {.columns}
-
-::: {.column width="50%"}
-
-1. domain extension
-    1. other subjects
-    2. extra-academic domain
-2. causal relation
-    1. predictors extension: domain-characteristics
-    2. criteria extension: domain-specific beliefs and learning behaviors
-
-:::
-
-::: {.column width="50%"}
-
-![](img/GeneralizedIE.png){width=100%}
-
-:::
-
-::::
-
 ## Others
 
 1. Downward Comparison Theory [@wills1981downward] $\rightarrow$ proven wrong [@gerber2018]
 2. Construal Theory and Upward Social Comparisons [@collins1996better; @collins2000among] 
-  1. Collins proposed the assimilation vs contrast effects
-  2. It is similar to SAM
-3. Self-Evaluation Maintenance model (SEM) [@tesser1988toward]
-    1. which is different than social comparison [@wheeler2020history]
+    1. Collins proposed the assimilation vs contrast effects  
+    2. It is similar to SAM
 4. Social Comparison Orientation [@gibbons1999individual]
 5. local vs general comparison [@zell2020better; @zell2020effects]
 6. vertical vs horizontal comparison $\leftrightarrow$ agentic and communal motives [@locke2014agency]
-7. Social Identity Theory and Self Categorization Theory (for a brief description see Trepte and Loy [-@trepte2017social])
-8. Temporal comparison [@wilson2020temporal]
-9. ... 
+
+## Some "non-social" comparison 
+
+1. Self-Evaluation Maintenance model (SEM) [@tesser1988toward]
+    1. which is different than social comparison [@wheeler2020history]
+2. Social Identity Theory and Self Categorization Theory (for a brief description see Trepte and Loy [-@trepte2017social])
+3. Dimensional comparison [@helm2020dimensional]
+4. Temporal comparison (Theoretical origin by Albert [-@albert1977temporal]; for a contemporary summary: Wilson [-@wilson2020temporal]
 
 ::: notes
 Construal:

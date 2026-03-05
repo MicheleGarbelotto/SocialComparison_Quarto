@@ -260,17 +260,17 @@ Main *assumptions*:
 
 ## Others
 
-1. Downward Comparison Theory [@wills1981downward] $\rightarrow$ proven wrong [@gerber2018]
+1. Downward Comparison Theory [@wills1981downward] $\rightarrow$ refuted [@gerber2018]
 2. Construal Theory and Upward Social Comparisons [@collins1996better; @collins2000among] 
-  1. Collins proposed the assimilation vs contrast effects
-  2. It is similar to SAM
+    1. Collins proposed the assimilation vs contrast effects  
+    2. It is similar to SAM
 3. Self-Evaluation Maintenance model (SEM) [@tesser1988toward]
     1. which is different than social comparison [@wheeler2020history]
 4. Social Comparison Orientation [@gibbons1999individual]
 5. local vs general comparison [@zell2020better; @zell2020effects]
 6. vertical vs horizontal comparison $\leftrightarrow$ agentic and communal motives [@locke2014agency]
-7. Social Identity Theory and Self Categorization Theory^[For a brief description see Trepte and Loy [-@trepte2017social]]
-8. Temporal comparison [@wilson2020temporal]
+7. Social Identity Theory and Self Categorization Theory (for a brief description see Trepte and Loy [-@trepte2017social])
+8. Temporal comparison (Theoretical origin by Albert [-@albert1977temporal]; for a contemporary summary: Wilson [-@wilson2020temporal]
 9. ... 
 
 ::: notes
