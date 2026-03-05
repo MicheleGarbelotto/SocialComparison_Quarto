@@ -14,4 +14,6 @@ format:
 
 # Presentations
 
-[First social comparison presentation](SC_Presentation.html)
+[Presentation: literature review and experimental designs](SC_Presentation.html)
+
+[Presentation: material loss and gain in social comparison](SC_LossAndGainHp.html)
