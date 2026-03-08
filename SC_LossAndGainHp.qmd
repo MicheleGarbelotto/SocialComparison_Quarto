@@ -278,7 +278,9 @@ Downward social comparison $\rightarrow$ > psychological discomfort $\rightarrow
 
 > Is there a difference in upward social comparison?
 
-![](img\cow.png){.fade-in}
+. . . 
+
+![](img\cow.png)
 
 
 # Experimental design
