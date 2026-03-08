@@ -260,7 +260,7 @@ No answer in the *social comparison* literature
 
 ### Rationale
 
-Downward social comparison $\rightarrow$ > psychological discomfort $\rightarrow$ < (social comparison) information avoidance/seeking
+Downward social comparison $\rightarrow$ > psychological discomfort $\rightarrow$ > (social comparison) information avoidance
 
 
 ### Some moderators for the first causal relation {.fragment}
@@ -394,17 +394,17 @@ The probability of sampling someone with a lower score is: **66.7%**
 main effects:
 
 1. main effect of the domain
-2. main effect of amount of numbers*?*
-3. main effect of number distance*?*
+2. main effect of amount of numbers**?**
+3. main effect of number distance**?**
 
 . . .
 
 Interaction effects:
 
-1. domain X amount of numbers
-2. domain X number distance
-3. amount of numbers X number distance
-4. domain X amount of numbers X number distance
+1. domain X amount of numbers**?**
+2. domain X number distance**?**
+3. amount of numbers X number distance**?**
+4. domain X amount of numbers X number distance**?**
 
 . . .
 
@@ -431,7 +431,7 @@ Psychological discomfort hypothesis:
 # Some problems
 
 1. I haven't looked at the information avoidance/seeking literature
-2. In the experiment non-information seeking and information avoidance aren't differentiated
+2. Non-information seeking and information avoidance aren't differentiated
 
 
 
