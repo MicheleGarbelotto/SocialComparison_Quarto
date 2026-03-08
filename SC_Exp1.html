@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Social Comparison Roulette Task</title>
+
+  <link href="https://unpkg.com/jspsych@7.3.4/css/jspsych.css" rel="stylesheet" />
+  <script src="https://unpkg.com/jspsych@7.3.4"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.3"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-call-function@1.1.3"></script>
+
+  <style>
+    html, body { background:#000; color:#fff; margin:0; padding:0; width:100%; height:100%; overflow:hidden; }
+    body { background:#000; color:#fff; margin:0; }
+
+    .jspsych-display-element{
+      position: fixed !important;
+      inset: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      overflow: hidden !important;
+      display: block !important;
+    }
+    .jspsych-content-wrapper{
+      position: fixed !important;
+      inset: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      overflow: hidden !important;
+      display: block !important;
+    }
+    .jspsych-content{
+      width: 100vw !important;
+      height: 100vh !important;
+      max-width: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      overflow: hidden !important;
+      display: block !important;
+    }
+
+    .center { text-align:center; }
+    .big { font-size:44px; letter-spacing:0.5px; }
+    .mid { font-size:28px; }
+    .small { font-size:18px; opacity:0.9; }
+
+    .row { display:flex; justify-content:center; gap:22px; margin-top:18px; flex-wrap:wrap; }
+    .keybox { border:1px solid #777; padding:12px 16px; border-radius:8px; min-width:180px; }
+    .key { font-weight:700; }
+
+    .stage {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      gap: 18px;
+      padding: 22px 16px;
+      box-sizing:border-box;
+      transform: translateZ(0);
+    }
+
+    .stageFixed{
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      box-sizing: border-box;
+      padding: 22px 16px;
+      transform: translateZ(0);
+
+      display: grid;
+      justify-items: center;
+      align-content: center;
+      row-gap: 18px;
+
+      grid-template-rows: auto 520px 170px;
+    }
+
+    .resultNumber{
+      font: 800 36px/1 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      letter-spacing:0.4px;
+      margin-top: 10px;
+    }
+
+    .rouletteRow{
+      width: 100%;
+      height: 520px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap: 28px;
+    }
+
+    .roulette-wrap{
+      width: 520px;
+      height: 520px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex: 0 0 auto;
+    }
+
+    .sidePanel{
+      width: min(420px, 40vw);
+      min-height: 520px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:flex-start;
+      gap: 14px;
+      box-sizing:border-box;
+      padding: 18px 18px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: 0 0 14px rgba(0,0,0,0.45);
+      min-height: 0; /* allow inner flex children to scroll */
+    }
+
+    .sideTitle{
+      font: 800 22px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      letter-spacing:0.3px;
+    }
+
+    .sideText{
+      font: 500 16px/1.35 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      opacity:0.95;
+      max-width: 100%;
+    }
+
+    /* SCROLLABLE samples list (bottom-stuck + scrollable) */
+    .sampleList{
+      width: 100%;
+      border-top: 1px solid rgba(255,255,255,0.16);
+      padding-top: 12px;
+
+      flex: 1 1 auto;
+      min-height: 0;          /* critical for flex scrollability */
+      max-height: 320px;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+
+      display:flex;
+      flex-direction:column;
+      gap: 8px;
+
+      justify-content: flex-end;
+    }
+    .sampleList{
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255,255,255,0.28) rgba(255,255,255,0.06);
+    }
+    .sampleList::-webkit-scrollbar{ width: 10px; }
+    .sampleList::-webkit-scrollbar-track{ background: rgba(255,255,255,0.06); border-radius: 10px; }
+    .sampleList::-webkit-scrollbar-thumb{ background: rgba(255,255,255,0.28); border-radius: 10px; }
+    .sampleList::-webkit-scrollbar-thumb:hover{ background: rgba(255,255,255,0.38); }
+
+    .sampleItem{
+      font: 800 20px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      letter-spacing:0.2px;
+      color:#fff;
+    }
+
+    .sideKeys{
+      display:flex;
+      gap: 12px;
+      flex-wrap:wrap;
+      margin-top: 6px;
+    }
+    .sideKeyBox{
+      border:1px solid rgba(255,255,255,0.25);
+      padding:10px 12px;
+      border-radius:10px;
+      min-width: 140px;
+      font: 700 14px/1 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      opacity:0.95;
+    }
+
+    .roulette-stage {
+      position:relative;
+      width: 520px;
+      height: 520px;
+      margin: 0 auto;
+      transform: translateZ(0);
+      overflow: visible;
+    }
+
+    .wheelGroup{
+      position:absolute;
+      left:50%; top:50%;
+      width: 520px;
+      height: 520px;
+      transform: translate(-50%, -50%) rotate(0deg);
+      transform-origin: 50% 50%;
+      will-change: transform;
+    }
+
+    .wheel {
+      position:absolute;
+      left:50%; top:50%;
+      width: 520px; height: 520px;
+      transform: translate(-50%, -50%);
+      border-radius:50%;
+      background:#222;
+      border: 16px solid #000;
+      box-shadow: 0 0 22px rgba(0,0,0,0.65), inset 0 0 18px rgba(0,0,0,0.55);
+      pointer-events:none;
+    }
+
+    .divider {
+      position:absolute;
+      left:50%; top:50%;
+      width: 2px;
+      height: 260px;
+      background: rgba(0,0,0,0.75);
+      transform-origin: 0 100%;
+      pointer-events:none;
+      z-index:2;
+    }
+
+    /* Labels: aligned like roulette pockets (upright, bottom toward center) */
+    .wlabel {
+      position:absolute;
+      left:50%; top:50%;
+      transform-origin: 0 0;
+      font: 900 22px/1 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      pointer-events:none;
+      white-space:nowrap;
+      color:#000;
+      z-index:3;
+      user-select:none;
+    }
+    .wlabel span {
+      display:inline-block;
+      transform: translate(-50%, -50%);
+    }
+
+    .arrow {
+      position:absolute;
+      left:50%; top:50%;
+      width: 520px; height: 520px;
+      transform: translate(-50%, -50%);
+      pointer-events:none;
+      z-index:10;
+    }
+    .arrow::after{
+      content:"";
+      position:absolute;
+      left:50%;
+      top: 6px;
+      transform: translateX(-50%);
+      width:0; height:0;
+      border-left:18px solid transparent;
+      border-right:18px solid transparent;
+      border-bottom:32px solid #fff;
+      filter: drop-shadow(0 0 8px rgba(0,0,0,0.75));
+    }
+
+    .hub {
+      position:absolute;
+      left:50%; top:50%;
+      width: 120px; height: 120px;
+      transform: translate(-50%, -50%);
+      border-radius:50%;
+      background: radial-gradient(circle at 35% 35%, #5b3a32 0%, #3b2420 55%, #241511 100%);
+      border: 8px solid rgba(0,0,0,0.55);
+      box-shadow: inset 0 0 14px rgba(0,0,0,0.65);
+      z-index:9;
+      pointer-events:none;
+    }
+    .hub::before, .hub::after{
+      content:"";
+      position:absolute;
+      left:50%; top:50%;
+      width: 96px; height: 12px;
+      background: #f2b91d;
+      border-radius: 10px;
+      transform: translate(-50%,-50%);
+      box-shadow: 0 0 10px rgba(0,0,0,0.35);
+    }
+    .hub::after{ transform: translate(-50%,-50%) rotate(90deg); }
+    .hub-dot{
+      position:absolute;
+      left:50%; top:50%;
+      width: 28px; height: 28px;
+      background:#f2b91d;
+      border-radius:50%;
+      transform: translate(-50%,-50%);
+      box-shadow: 0 0 10px rgba(0,0,0,0.35);
+    }
+
+    .panelText{
+      width: min(860px, 95vw);
+      height: 170px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+    }
+
+    @media (max-width: 980px){
+      .rouletteRow{ gap: 16px; }
+      .sidePanel{ width: min(360px, 44vw); }
+    }
+
+    @media (max-width: 860px){
+      .rouletteRow{
+        flex-direction: column;
+        height: 520px;
+        gap: 14px;
+      }
+      .sidePanel{
+        width: min(740px, 92vw);
+        min-height: 220px;
+        align-items:center;
+        text-align:center;
+      }
+      .sampleList{ align-items:center; }
+    }
+
+    @media (max-width: 620px){
+      .roulette-stage{ width: 360px; height: 360px; }
+      .wheelGroup{ width: 360px; height: 360px; }
+      .wheel, .arrow{ width: 360px; height: 360px; }
+      .wheel{ border-width: 12px; }
+      .arrow::after{ top: 4px; border-left-width:14px; border-right-width:14px; border-bottom-width:26px; }
+      .divider{ height: 180px; }
+      .wlabel{ font-size: 16px; }
+      .resultNumber{ font-size: 28px; }
+      .hub{ width: 92px; height: 92px; border-width: 6px; }
+      .hub::before, .hub::after{ width: 70px; height: 10px; }
+      .hub-dot{ width: 22px; height: 22px; }
+
+      .stageFixed{ grid-template-rows: auto 360px 170px; }
+      .rouletteRow{ height: 360px; }
+      .roulette-wrap{ width: 360px; height: 360px; }
+
+      .sampleList{ max-height: 220px; }
+    }
+  </style>
+
+</head>
+
+<body></body>
+
+<script>
+const N_BLOCKS = 2;
+const TRIALS_PER_BLOCK = 20;
+
+const KEY_SPACE = " ";
+const KEY_YES = "y";
+const KEY_NO  = "n";
+
+const OTHER_NAME = "John";
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === " ") e.preventDefault();
+}, { passive:false });
+
+const SPIN_ANIM_MS = 2500;
+const RESULT_MS = 1600;
+
+const GRAY = "#9a9a9a";
+const GREEN_LIGHT = "#39cc73";
+const GREEN_DARK  = "#0a8a36";
+const RED_LIGHT   = "#ea2a2a";
+const RED_DARK    = "#8f0f0f";
+
+const N_SLICES = 12;
+const SLICE_DEG = 360 / N_SLICES;
+
+const BLOCKS = [
+  {
+    name: "winning",
+    start_balance: 0,
+    base_outcomes: [0, +5, +15],
+    base_labels:   ["+€0", "+€5", "+€15"],
+    base_colors:   [GRAY, GREEN_LIGHT, GREEN_DARK]
+  },
+  {
+    name: "losing",
+    start_balance: 100,
+    base_outcomes: [0, -5, -15],
+    base_labels:   ["−€0", "−€5", "−€15"],
+    base_colors:   [GRAY, RED_LIGHT, RED_DARK]
+  }
+];
+
+function shuffle(arr){
+  const a = arr.slice();
+  for (let i=a.length-1; i>0; i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function categoryForAmount(v){
+  if (v === 0) return "zero";
+  return (v > 0) ? "gain" : "loss";
+}
+function sampleUniformIndex(n){ return Math.floor(Math.random()*n); }
+
+function buildSlicesForBlock(block){
+  const outcomes = [];
+  const labels = [];
+  const colors = [];
+  for (let i=0; i<N_SLICES; i++){
+    const k = i % 3;
+    outcomes.push(block.base_outcomes[k]);
+    labels.push(block.base_labels[k]);
+    colors.push(block.base_colors[k]);
+  }
+  return { outcomes, labels, colors };
+}
+
+function buildOutcomeWheelBackground(sliceColors){
+  const stops = [];
+  for (let i=0; i<N_SLICES; i++){
+    const c = sliceColors[i];
+    const start = (i * SLICE_DEG).toFixed(6) + "deg";
+    const end   = ((i+1) * SLICE_DEG).toFixed(6) + "deg";
+    stops.push(`${c} ${start} ${end}`);
+  }
+  return `conic-gradient(from 0deg, ${stops.join(", ")})`;
+}
+
+function buildDividersHTML(){
+  let html = "";
+  for (let i=0; i<N_SLICES; i++){
+    const angle = i * SLICE_DEG;
+    html += `<div class="divider" style="transform: translate(-50%, -100%) rotate(${angle}deg);"></div>`;
+  }
+  return html;
+}
+
+/* Roulette-like label alignment:
+   - Place at slice center line: rotate(angle) translate(r)
+   - Then rotate by 90deg so the glyphs "stand" on the inner edge (bottom toward center).
+   - Keep text readable: flip 180deg on bottom half so nothing is upside-down. */
+function buildWheelLabelsHTML(sliceLabels){
+  const r = 214;  // closer to rim, like the reference roulette
+  let html = "";
+  for (let i=0; i<N_SLICES; i++){
+    const angle = ((i + 0.5) * SLICE_DEG);
+    const txt = sliceLabels[i];
+
+    let rot2 = 90;
+    const total = ((angle + rot2) % 360 + 360) % 360;
+    if (total > 90 && total < 270) rot2 += 180;
+
+    html += `<div class="wlabel" style="transform: rotate(${angle}deg) translate(${r}px) rotate(${rot2}deg);">
+               <span>${txt}</span>
+             </div>`;
+  }
+  return html;
+}
+
+function rouletteHTML(currentWheelAngle){
+  const block = BLOCKS[state.blockOrder[state.blockIndex]];
+  const slices = buildSlicesForBlock(block);
+  const wheelBG = buildOutcomeWheelBackground(slices.colors);
+  const labels = buildWheelLabelsHTML(slices.labels);
+  const divs = buildDividersHTML();
+
+  return `
+    <div class="roulette-wrap">
+      <div class="roulette-stage">
+        <div class="wheelGroup" style="transform: translate(-50%, -50%) rotate(${currentWheelAngle}deg);">
+          <div class="wheel" style="background:${wheelBG};"></div>
+          ${divs}
+          ${labels}
+          <div class="hub"><div class="hub-dot"></div></div>
+        </div>
+        <div class="arrow"></div>
+      </div>
+    </div>
+  `;
+}
+
+function sidePanelHTML(mode){
+  const samples = state._otherSamples || [];
+  const listHTML = samples.length === 0
+    ? `<div class="sideText" style="opacity:0.75;">No outcomes sampled yet.</div>`
+    : samples.map((s) => `<div class="sampleItem">${OTHER_NAME}: ${s.label}</div>`).join("");
+
+  let title = "";
+  let text = "";
+  let keys = "";
+
+  if (mode === "idle"){
+    title = "Next";
+    text = "Press SPACE to spin.";
+    keys = `<div class="sideKeys"><div class="sideKeyBox"><span class="key">Space</span> Spin</div></div>`;
+  } else if (mode === "spinning"){
+    title = "Spinning";
+    text = "Wait.";
+    keys = "";
+  } else {
+    title = "Sampling";
+    text = `Press Y to see ${OTHER_NAME}'s outcome. Press Y multiple times to see more outcomes. Press N to continue.`;
+    keys = `
+      <div class="sideKeys">
+        <div class="sideKeyBox"><span class="key">Y</span> Sample more</div>
+        <div class="sideKeyBox"><span class="key">N</span> Continue</div>
+      </div>
+    `;
+  }
+
+  return `
+    <div class="sidePanel">
+      <div class="sideTitle">${title}</div>
+      <div class="sideText">${text}</div>
+      ${keys}
+      <div class="sampleList" id="sampleList">
+        ${listHTML}
+      </div>
+    </div>
+  `;
+}
+
+let state = {
+  blockOrder: shuffle([0,1]),
+  blockIndex: 0,
+  trialInBlock: 0,
+  balance: 0,
+
+  wheelAngle: 0,
+
+  _trialNum: null,
+  _balanceBefore: null,
+  _balanceAfter: null,
+  _outcomeAmount: null,
+  _outcomeLabel: null,
+  _outcomeCategory: null,
+  _landingAngle: null,
+  _spinTargetAngleAbs: null,
+
+  _otherSamples: [],
+  _lastKey: null
+};
+
+const jsPsych = initJsPsych({
+  display_element: document.body,
+  on_finish: () => {
+    jsPsych.data.get().localSave("csv", "social_comparison_roulette.csv");
+  }
+});
+
+const instructions = {
+  type: jsPsychHtmlKeyboardResponse,
+  choices: [KEY_SPACE],
+  stimulus: () => `
+    <div class="stage">
+      <div class="mid center">TASK INSTRUCTIONS</div>
+      <div class="small center" style="margin-top:18px; max-width:860px;">
+        There are <b>2 blocks</b>. Each block has <b>20 trials</b>.<br><br>
+        In the <b>winning</b> block, outcomes are <b>+€0</b>, <b>+€5</b>, <b>+€15</b>. You start at <b>€0</b>.<br>
+        In the <b>losing</b> block, outcomes are <b>−€0</b>, <b>−€5</b>, <b>−€15</b>. You start at <b>€100</b>.<br><br>
+        Press <b>Space</b> to spin each time.<br><br>
+        After each spin you can sample what <b>${OTHER_NAME}</b> got.
+        You can press <b>Y multiple times</b> to sample more outcomes before continuing.
+      </div>
+      <div class="row">
+        <div class="keybox"><span class="key">Space</span> Start</div>
+      </div>
+    </div>
+  `,
+  data: { phase: "instructions" }
+};
+
+function blockStart(){
+  return {
+    type: jsPsychHtmlKeyboardResponse,
+    choices: [KEY_SPACE],
+    on_start: () => {
+      const block = BLOCKS[state.blockOrder[state.blockIndex]];
+      state.trialInBlock = 0;
+      state.balance = block.start_balance;
+      state.wheelAngle = 0;
+    },
+    stimulus: () => `
+      <div class="stage">
+        <div class="mid center">BLOCK ${state.blockIndex + 1} / ${N_BLOCKS}</div>
+        <div class="row">
+          <div class="keybox"><span class="key">Space</span> Begin</div>
+        </div>
+      </div>
+    `,
+    data: () => {
+      const block = BLOCKS[state.blockOrder[state.blockIndex]];
+      return { phase:"block_start", block_index: state.blockIndex + 1, block_name: block.name };
+    }
+  };
+}
+
+function pressToSpin(){
+  return {
+    type: jsPsychHtmlKeyboardResponse,
+    choices: [KEY_SPACE],
+    on_start: () => { state._lastKey = null; },
+    stimulus: () => `
+      <div class="stageFixed">
+        <div class="mid center"> </div>
+        <div class="rouletteRow">
+          ${rouletteHTML(state.wheelAngle)}
+          ${sidePanelHTML("idle")}
+        </div>
+        <div class="panelText">
+          <div class="mid center">Press SPACE to spin</div>
+          <div class="row">
+            <div class="keybox"><span class="key">Space</span> Spin</div>
+          </div>
+        </div>
+      </div>
+    `,
+    data: () => {
+      const block = BLOCKS[state.blockOrder[state.blockIndex]];
+      return { phase:"press_to_spin", block_index: state.blockIndex + 1, block_name: block.name, spin_trigger:"space" };
+    },
+    on_finish: (d) => { state._lastKey = d.response; }
+  };
+}
+
+function rouletteSpin(){
+  return {
+    type: jsPsychHtmlKeyboardResponse,
+    choices: "NO_KEYS",
+    trial_duration: SPIN_ANIM_MS,
+    stimulus: () => {
+      const block = BLOCKS[state.blockOrder[state.blockIndex]];
+      const slices = buildSlicesForBlock(block);
+      const wheelBG = buildOutcomeWheelBackground(slices.colors);
+      const labels = buildWheelLabelsHTML(slices.labels);
+      const divs = buildDividersHTML();
+
+      return `
+        <div class="stageFixed">
+          <div class="mid center"> </div>
+          <div class="rouletteRow">
+            <div class="roulette-wrap">
+              <div class="roulette-stage">
+                <div class="wheelGroup" id="wheelGroup" style="transform: translate(-50%, -50%) rotate(${state.wheelAngle}deg);">
+                  <div class="wheel" style="background:${wheelBG};"></div>
+                  ${divs}
+                  ${labels}
+                  <div class="hub"><div class="hub-dot"></div></div>
+                </div>
+                <div class="arrow"></div>
+              </div>
+            </div>
+            ${sidePanelHTML("spinning")}
+          </div>
+          <div class="panelText">
+            <div class="mid center">SPINNING...</div>
+          </div>
+        </div>
+      `;
+    },
+    data: () => {
+      const block = BLOCKS[state.blockOrder[state.blockIndex]];
+      return { phase:"roulette_spin", block_index: state.blockIndex + 1, block_name: block.name };
+    },
+    on_load: () => {
+      const wheelGroup = document.getElementById("wheelGroup");
+      if (!wheelGroup) return;
+
+      const block = BLOCKS[state.blockOrder[state.blockIndex]];
+      const slices = buildSlicesForBlock(block);
+
+      const idx = sampleUniformIndex(N_SLICES);
+      const outcome = slices.outcomes[idx];
+      const outLabel = slices.labels[idx];
+
+      const center = (idx + 0.5) * SLICE_DEG;
+      const jitter = (Math.random() - 0.5) * (SLICE_DEG * 0.28);
+      const landing = center + jitter;
+
+      const targetMod = ((-landing) % 360 + 360) % 360;
+
+      const currentMod = ((state.wheelAngle % 360) + 360) % 360;
+      let delta = targetMod - currentMod;
+      while (delta < 0) delta += 360;
+      while (delta >= 360) delta -= 360;
+
+      const spins = 10;
+      const targetAbs = state.wheelAngle + spins * 360 + delta;
+
+      wheelGroup.style.transition = "none";
+      wheelGroup.style.transform = `translate(-50%, -50%) rotate(${state.wheelAngle}deg)`;
+      wheelGroup.offsetHeight;
+
+      requestAnimationFrame(() => {
+        wheelGroup.style.transition = `transform ${SPIN_ANIM_MS}ms cubic-bezier(0.08, 0.82, 0.18, 1)`;
+        wheelGroup.style.transform = `translate(-50%, -50%) rotate(${targetAbs}deg)`;
+      });
+
+      state._trialNum = state.trialInBlock + 1;
+      state._balanceBefore = state.balance;
+
+      state._outcomeAmount = outcome;
+      state._outcomeLabel = outLabel;
+      state._outcomeCategory = categoryForAmount(outcome);
+
+      state._landingAngle = ((landing % 360) + 360) % 360;
+      state._spinTargetAngleAbs = targetAbs;
+
+      state._otherSamples = [];
+      state._lastKey = null;
+    }
+  };
+}
+
+function resultFeedback(){
+  return {
+    type: jsPsychHtmlKeyboardResponse,
+    choices: "NO_KEYS",
+    trial_duration: RESULT_MS,
+    stimulus: () => {
+      state.wheelAngle = ((state._spinTargetAngleAbs || state.wheelAngle) % 360 + 360) % 360;
+
+      return `
+        <div class="stageFixed">
+          <div class="mid center"> </div>
+          <div class="rouletteRow">
+            ${rouletteHTML(state.wheelAngle)}
+            ${sidePanelHTML("result")}
+          </div>
+          <div class="panelText">
+            <div class="mid center">RESULT</div>
+            <div class="resultNumber center">${state._outcomeLabel}</div>
+          </div>
+        </div>
+      `;
+    },
+    data: () => {
+      const block = BLOCKS[state.blockOrder[state.blockIndex]];
+      return { phase:"result_feedback", block_index: state.blockIndex + 1, block_name: block.name };
+    }
+  };
+}
+
+function sampleOthersStep(){
+  return {
+    type: jsPsychHtmlKeyboardResponse,
+    choices: [KEY_YES, KEY_NO],
+    stimulus: () => `
+      <div class="stageFixed">
+        <div class="mid center"> </div>
+        <div class="rouletteRow">
+          ${rouletteHTML(state.wheelAngle)}
+          ${sidePanelHTML("sample")}
+        </div>
+        <div class="panelText">
+          <div class="mid center">RESULT</div>
+          <div class="resultNumber center">${state._outcomeLabel}</div>
+        </div>
+      </div>
+    `,
+    data: () => {
+      const block = BLOCKS[state.blockOrder[state.blockIndex]];
+      return {
+        phase: "social_sampling_step",
+        block_index: state.blockIndex + 1,
+        block_name: block.name,
+        samples_so_far: (state._otherSamples || []).length
+      };
+    },
+    on_finish: (data) => {
+      state._lastKey = data.response;
+
+      if (data.response === KEY_YES){
+        const block = BLOCKS[state.blockOrder[state.blockIndex]];
+        const slices = buildSlicesForBlock(block);
+        const idx = sampleUniformIndex(N_SLICES);
+        const amt = slices.outcomes[idx];
+        const lab = slices.labels[idx];
+        const cat = categoryForAmount(amt);
+        state._otherSamples.push({ amount: amt, label: lab, category: cat });
+      }
+    },
+    on_load: () => {
+      const el = document.getElementById("sampleList");
+      if (el) el.scrollTop = el.scrollHeight;
+    }
+  };
+}
+
+function sampleOthersLoop(){
+  return {
+    timeline: [ sampleOthersStep() ],
+    loop_function: () => state._lastKey === KEY_YES
+  };
+}
+
+const finalizeTrial = {
+  type: jsPsychCallFunction,
+  func: () => {
+    const block = BLOCKS[state.blockOrder[state.blockIndex]];
+    const samples = state._otherSamples || [];
+
+    jsPsych.data.addDataToLastTrial({
+      block_index: state.blockIndex + 1,
+      block_name: block.name,
+
+      trial_in_block: state._trialNum,
+      n_trials_block: TRIALS_PER_BLOCK,
+      starting_balance_block: block.start_balance,
+
+      roulette_outcome_amount: state._outcomeAmount,
+      roulette_outcome_label: state._outcomeLabel,
+      roulette_outcome_category: state._outcomeCategory,
+
+      spin_landing_angle: state._landingAngle,
+      spin_trigger: "space",
+
+      other_name: OTHER_NAME,
+      other_samples_n: samples.length,
+      other_samples_amounts_json: JSON.stringify(samples.map(s => s.amount)),
+      other_samples_labels_json: JSON.stringify(samples.map(s => s.label)),
+      other_samples_categories_json: JSON.stringify(samples.map(s => s.category))
+    });
+
+    state.trialInBlock += 1;
+
+    state._trialNum = null;
+    state._balanceBefore = null;
+    state._balanceAfter = null;
+    state._outcomeAmount = null;
+    state._outcomeLabel = null;
+    state._outcomeCategory = null;
+    state._landingAngle = null;
+    state._spinTargetAngleAbs = null;
+
+    state._otherSamples = [];
+    state._lastKey = null;
+  }
+};
+
+function oneTrial(){
+  return {
+    timeline: [
+      pressToSpin(),
+      rouletteSpin(),
+      resultFeedback(),
+      sampleOthersLoop(),
+      finalizeTrial
+    ]
+  };
+}
+
+function blockTimeline(){
+  const inner = [];
+  for (let i=0; i<TRIALS_PER_BLOCK; i++) inner.push(oneTrial());
+  return inner;
+}
+
+function blockEnd(){
+  return { type: jsPsychCallFunction, func: () => { state.blockIndex += 1; } };
+}
+
+const timeline = [];
+timeline.push(instructions);
+
+for (let b=0; b<N_BLOCKS; b++){
+  timeline.push(blockStart());
+  timeline.push(...blockTimeline());
+  timeline.push(blockEnd());
+}
+
+timeline.push({
+  type: jsPsychHtmlKeyboardResponse,
+  choices: "NO_KEYS",
+  trial_duration: 1000,
+  stimulus: () => `<div class="stage"><div class="mid center">End.</div></div>`,
+  data: { phase: "end" }
+});
+
+jsPsych.run(timeline);
+</script>
+
+</html>

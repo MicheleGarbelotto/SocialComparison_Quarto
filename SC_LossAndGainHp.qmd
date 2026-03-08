@@ -1,5 +1,5 @@
 ---
-title: "Social comparison: differentiating material loss and material gain"
+title: "A social comparison analysis: differentiating loss and gain"
 author: 
     name: Michele Garbelotto
     email: garbelotto.michele@gmail.com
@@ -19,26 +19,148 @@ format:
     height: 550
     css: ChapProg/ChapProg.css
     include-after-body: ChapProg/ChapProg.js
+    scrollable: true
+    transition-speed: slow
+    transition: none
 execute:
   echo: false
 ---
 
-# Theoretical models of the social comparison field
+# Research question
 
-## What the hell is social comparison?
+## Specific research question
+
+> Do individuals seek social comparison information differently in the loss domain compared to the gain domain?
+
+. . . 
+
+<div style="height: 10px;"></div>
+
+::: {.callout-warning}
+
+Michele what the f**k do you mean?
+
+:::
+
+<div style="height: 10px;"></div>
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+<div class="fragment">
+What is "**social comparison**"?
+</div>
+
+<div class="fragment" style="text-align:center; font-size:60px;">↓</div>
+
+<div class="fragment" style="text-align:center; font-size:22px;">
+The "social comparison field" [@buunk2007social]
+</div>
+
+:::
+
+::: {.column width="50%"}
+
+<div class="fragment">
+What are "**gain domain**" and "**loss domain**"?
+</div>
+
+<div class="fragment" style="text-align:center; font-size:60px;">↓</div>
+
+<div class="fragment" style="text-align:center; font-size:22px;">
+Prospect theory [@kahneman2013prospect]
+</div>
+
+:::
+
+::::
+
+
+## Example!
+
+::: {.panel-tabset}
+
+## Prologue
+
+<div style="text-align:center;">
+
+![](img/researcher.jpg){width=60% .fragment}
+
+</div>
+
+
+![](img/grant2.png){.fragment}
+
+## Loss domain
+
+The researcher won a grant of x€ < 1 mln
+
+:::{.incremental}
+- 900k
+- 800k
+- 700k
+- 600k
+- ...
+:::
+
+## Gain domain
+
+The researcher won a grant of x€ > 1 mln
+
+:::{.incremental}
+- 1.1 mln
+- 1.2 mln
+- 1,3 mln
+- 1.4 mln
+- ...
+:::
+
+:::
+
+## General research question
+
+> Is there a difference in social comparison between the loss domain and the gain domain?
+
+. . .
+
+Other specific research questions:
+
+::: {.incremental}
+
+- is there a difference in comparison preference between the two domains?
+
+- do the social comparison effects differ between the two domains?
+
+- is there a difference in how people downplay their performance between the two domains? 
+  - Sensitivity about being the target of a threatening upward comparison (STTUC) [@exline1999perils]
+
+::: 
+
+
+# The "social comparison field"
+
+
+::: notes
+Buunk and Gibbons 2007
+:::
+
+## What is "social comparison"?
 
 "[social comparison is] the process of thinking about information about one or more person in relation to the self" [@wood1996, pp. 520–521]
 
 "the cognitive process of evaluating a certain target by comparing it to a certain standard", "social comparisons use information on others as the standard"^[A standard is the person/s to which the individual is comparing to, while a target is a self-attribute] [@moller2016generalized]
 
+. . .
+
 ### Necessary conditions of social comparison as a theory
 
 1. centrality of self-attributes
 2. evaluation of a target
-  1. self-evaluation as a dependent variable
-3. uncertainty drive
+  1. self-evaluation as a dependent variable [@wheeler2020history]
+3. uncertainty drive [@wheeler2020history]
 
-## What the hell is social comparison?
+## What is "social comparison"?
 
 ### Some core concepts of social comparison
 
@@ -51,272 +173,258 @@ execute:
 4.  contrast vs assimilation
 
 
-See Arigo et al. [-@arigo2020][^1].
+See @arigo2020^[They use the term "identification", instead of "assimilation", and "target" instead of "standard".]
 
-[^1]: They use the term "identification", instead of "assimilation", and "target" instead of "standard".
+## What isn't social comparison^[@wheeler2020history]
 
-## What isn't social comparison
-
-1. comparative conclusion
+1. comparative conclusions
 2. counterfactuals
 3. better than average effect
 4. false consensus effect
 
-### Conclusion
+. . .
+
+### so...
 
 1. the comparative process has to be present
 2. there has to be a comparison feedback
 
 
-## Historical origin: Social Comparison Theory^[Crusius et al. [-@crusius2022]]
+## Is there an answer to the research question based on the social comparison field?
 
-1.  *content* of comparison studied
-    1.  opinion
-    2.  abilities
-2.  *motivational* core
-    1.  drive to accurately evaluate one's opinions and abilities
-3.  tendency to compare with *similar* others, or slightly better others (in the case of abilities)
-    1. "similar" in what sense?
-4.  ... (other hypotheses)
+. . .
 
-::: notes
-The motivational core is related to Festinger's interest in uncertainty (cognitive dissonance theory). Researchers focused on comparison of ability and comparison at an individual level (no group level)
-:::
+No answer in the *social comparison* literature
 
-## Selective Accessibility Model[^3] (SAM) 
+. . .
 
-1.  explanatory *objective*: prediction of assimilation and contrast
-2.  selective accessibility mechanism
-    1. *phases*
-       1.  initial broad assessment of similarity
-           1.  perceived dissimilarity $\rightarrow$ dissimilarity hypothesis is tested
-           2.  perceived similarity $\rightarrow$ similarity hypothesis is tested
-    2.  heightened cognitive accessibility
-        1.  similarity hp $\rightarrow$ accessibility of standard-consistent self-knowledge $\rightarrow$ assimilation
-        2.  dissimilarity hp $\rightarrow$ accessibility of standard-inconsistent self-knowledge $\rightarrow$ contrast
+### A list of theories, models and hypothesis
 
-[^3]: Mussweiler [-@mussweiler2020]
+- Historical origin: Festinger's Social Comparison Theory [@crusius2022]
+- Downward Comparison Theory [@wills1981downward] $\rightarrow$ refuted [@gerber2018]
+- Construal Theory and Upward Social Comparisons [@collins1996better; @collins2000among] 
+- Selective Accessibility Model [@mussweiler2020]
+- Attributional comparison models [@suls2020]
+    - Related attributes hypothesis [@goethals1977]
+    - Proxy model [@wheeler1997; @martin2000]
+    - Triadic model [@suls2000three]
+- local vs general comparison [@zell2020better; @zell2020effects]
+- vertical vs horizontal comparison $\leftrightarrow$ agentic and communal motives [@locke2014agency]
+- Social Comparison Orientation [@gibbons1999individual]
+- [Social Identity Theory]{.fragment .highlight-blue} and Self Categorization Theory (for a brief description see @trepte2017social)
+- [Self-Evaluation Maintenance model]{.fragment .highlight-blue} (SEM) [@tesser1988toward]
+- [Dimensional Comparison Theory]{.fragment .highlight-blue} [@helm2020dimensional]
+- [Temporal Comparison Theory]{.fragment .highlight-blue} (Theoretical origin by @albert1977temporal; for a contemporary summary: @wilson2020temporal)
 
-## SAM
+# Prospect theory
 
-![Selective accessibility mechanism [@mussweiler2020]](img/SAM.png)
+## The gain function
 
-## SAM
-
-### Predictions 1
-
-1. *cognitive accessibility* $\rightarrow$ self-evaluation outcome
-    1. manipulation of similarity (different task) $\rightarrow$ assimilation
-    2. manipulation of dissimilarity (different task) $\rightarrow$ contrast
-2. self-evaluation outcome $\rightarrow$ *cognitive accessibility*
-    1. manipulation of comparison target
-        1. similar comparison target $\rightarrow$ focus on similarity (different task)
-        2. dissimilar comparison target $\rightarrow$ focus on dissimilarity (different task)
-        
-## SAM
-### Predictions 2
-
-1. *consequences*
-    1. motivational
-    2. affective [@epstude2009]
-    - e.g., assimilation with higher standard $\rightarrow$ > motivation and similar affect
-2. concept of *similarity*
-    1. self-evaluation: similarity on the critical dimension
-    2. cognitive accessibility: similarity of anything
-        1. e.g., social category, critical dimension, related dimension, etc.
-3. efficiency of similarity testing
-
-        
-::: notes
-Conditions that promotes similarity/dissimilarity
-
-This finding suggests that under conditions that promote
-similarity testing, the accessibility of standard-consistent target knowledge
-is increased. Under conditions that promote dissimilarity testing, however,
-standard-inconsistent knowledge becomes more accessible.
-
-similarity on anything: even what induces the perception of similarity such as ambient warmth
-
-:::
-
-## Attributional comparison models^[Main source: Suls and Wheeler [-@suls2020]]
-
-<div style="height: 10px;"></div>
-
-### Theoretical origin
-
-Related attributes hypothesis [@goethals1977]
-
-<div style="height: 10px;"></div>
-
-### Proxy model [@wheeler1997; @martin2000]
-
-1. how do people predict their performance?
-    1. "can i do X?"
-2. variables
-    1. maximum effort exertion 
-    2. similarity on related attributes
-    - also: perceived similarity of tasks
-    
-## Attributional comparison models
-
-### Triadic model [@suls2000three]
 :::: {.columns}
 
-::: {.column}
-1. types of *opinions*
-    1. value 
-    2. belief 
-    3. mixed-type
-2. preference assessment: "do I like X?"
-    1. comparison with a person with similar values
-3. belief assessment: "is X correct?"
-    1. comparison with an expert
-::: 
-    
-::: {.column}
-4. preference prediction: "will I like X?"
-    1. pattern of agreement or disagreement with the target
-    2. reaction of a person to X
-        1. assuming similarity on related attribute
-5. mixed-type opinion
-    1. comparison with a "similar expert"
+:::{.column}
+
+![@tversky1992advances](img\GainFunction.png){width=100%}
+:::
+
+:::{.column}
+### Two concepts {.fragment}
+
+:::{.incremental}
+- reference dependence
+  - endowment of a gift
+  - current wealth
+  - expectations
+  - counterfactuals
+  - goals
+  - social comparison
+  - ...
+
+- loss avversion
+:::
+
 :::
 
 ::::
 
-::: notes
-"if we are correct then the cognitive machinery described in the proxy
-and triadic models is activated in ambiguous situations to decide wisely and
-avoid failures, social conflicts, and other adverse events."
-:::
-
-## Others
-
-1. Downward Comparison Theory [@wills1981downward] $\rightarrow$ proven wrong [@gerber2018]
-2. Construal Theory and Upward Social Comparisons [@collins1996better; @collins2000among] 
-    1. Collins proposed the assimilation vs contrast effects  
-    2. It is similar to SAM
-4. Social Comparison Orientation [@gibbons1999individual]
-5. local vs general comparison [@zell2020better; @zell2020effects]
-6. vertical vs horizontal comparison $\leftrightarrow$ agentic and communal motives [@locke2014agency]
-
-## Some "non-social" comparison 
-
-1. Self-Evaluation Maintenance model (SEM) [@tesser1988toward]
-    1. which is different than social comparison [@wheeler2020history]
-2. Social Identity Theory and Self Categorization Theory (for a brief description see Trepte and Loy [-@trepte2017social])
-3. Dimensional comparison [@helm2020dimensional]
-4. Temporal comparison (Theoretical origin by Albert [-@albert1977temporal]; for a contemporary summary: Wilson [-@wilson2020temporal]
-
-::: notes
-Construal:
-
-"In this way, Collins’ model is mutually compatible with proxy. Mussweiler presents a similar model (the selective accessibility model), but it is based on cognitive accessibility, not on expectations (see Chapters 1 and 2)."
-
-horizontal comparison:
-
-"An extensive corpus of research suggests that perceived similarities (connective
-comparisons) enhance and perceived dissimilarities (contrastive
-comparisons) undermine warm, positive, empathic, communal feelings toward
-others (Byrne, 1971; Locke, 2003; Montoya, Horton, & Kirchner, 2008)."
-
-:::
 
 # The hypothesis
 
-## Two domains: material gain and material loss
+## Downward comparison hypothesis
+
+> Individuals in the loss domain will seek less comparison information if they compare downward
+
+. . .
+
+### Rationale
+
+Downward social comparison $\rightarrow$ > psychological discomfort $\rightarrow$ < (social comparison) information avoidance/seeking
 
 
+### Some moderators for the first causal relation {.fragment}
 
-## Reaction method
+::: {.incremental}
+- modesty norm
+- empathy
+- social identity
+- individual differences in social comparison [@gibbons1999individual]
+- political orientation
+- others?
+:::
 
-### Type 1
+## Upward comparison hypothesis?
 
-1.  between subject design
-2.  task: gambling task (e.g., roulette)
-3.  conditions: 3X3
-    1.  roulette scenarios
-        1.  the participant gains X amount of money
-        2.  the participant loses X amount of money
-        3.  the participant doesn't lose any money (even)
-    2.  comparison conditions
-        1.  comparison with a participant with a lower credit
-        2.  comparison with a participant with a higher credit
-        3.  comparison with a participant with the same credit
-        4.  no comparison scenario (control condition)
-      
-## Reaction method
+> Is there a difference in upward social comparison?
 
-:::: {.columns}
 
-::: {.column}
+# Experimental design
 
-3.  dependent variables
-    1.  self-esteem
-    2.  mood
-    4.  empathy toward the standard
-    5.  play intention
+## Experimental conditions
+
+::: {.incremental}
+
+- conditions within-subject 
+- 2 main blocks
+  - loss domain
+    - point of reference for every trial: x€ 
+  - win domain
+    - point of reference for every trial: 0€
     
 :::
 
-::: {.column}
+<div class="fragment">
 
-### Type 2
+### In each block 
 
-1.  same structure as type 1.
-2.  different task and dependent variables
+Phases:
+
+1. roulette task
+2. comparison task
+
+Experiment prototype ([link](SC_Exp1.html))
+
+</div>
+
+
+
+## Experimental conditions
+
+|                         | **More numbers** | **Less numbers** |
+|-------------------------|------------------|------------------|
+| **More distance**       | More numbers + more distance | Less numbers + more distance |
+| **Less distance**       | More numbers + less distance | Less numbers + less distance |
+
+Manipulating:
+- perceived probability of downward comparison
+- greater downward discrepancy may intensify discomfort about seeing others’ worse outcomes
+
+
+## Experimental conditions
+
+### Loss domain example
+
+|                         | **More numbers** | **Less numbers** |
+|-------------------------|------------------|------------------|
+| **More distance**       | - €0€,  10€, - 20€, - 30€, - 40€ | - 0€, - 20€, - 40€ |
+| **Less distance**       | - 0€, - 5€, - 10€, - 15€, - 20€ | - 0€, - 10€, - 20€ |
+
+
+:::: {.columns}
+
+::: {.column .fragment data-fragment-index="1"}
+
+- [X] - 0€
+- [ ] - 10€
+- [ ] - 20€
+- [ ] - 30€
+- [ ] - 40€
+
+The probability of sampling someone with a lower score is: **83.3%**
+
+:::
+
+::: {.column .fragment data-fragment-index="2"}
+
+- [X] - 0€
+- [ ] - 20€ 
+- [ ] - 40€
+
+The probability of sampling someone with a lower score is: **66.7%**
 
 :::
 
 ::::
 
-### Type 1 vs Type 2
+- greater downward discrepancy may intensify discomfort
 
-1. difference in self-evaluation
-    1. The outcome of type 1 is based on luck $\rightarrow$ no self-evaluation.
-    2. The outcome of type 2 is based on the ability of the participant $\rightarrow$ self-evaluation
+## Dependent variables
+
+- number of social comparison information sampled
+- time spent on sampling information
+- psychological discomfort?
+  - trial level
+    - post-sampling
+      - “How uncomfortable do you feel right now seeing the other participant’s outcomes?”
+    - pre-sampling
+      - “How uncomfortable would you feel after seeing the other participant’s outcomes?”
+  - block level
+    - "How uncomfortable on average have you felt?"
     
-::: notes
+## Other measurements
 
-Positive and Negative Affect Schedule
+- modesty norm
+- empathy
+- social identity: "when you were gambling in the loss scenario how much you identified with the group of participants?"
+- individual differences in social comparison
+- political orientation
+- others?
 
-:::
+- demographic information
 
-## Field study
+## Hypothesis
 
-1.  sample: gambling addicts
-    1.  online gambling
-    2.  offline gambling
-    3.  online and/or offline
-2.  Self-recorded diary
-    1.  types of procedures
-        1.  *event-contingent*
-        2.  interval-contingent
-        3.  signal-contingent
-3.  request: participants are instructed to complete a *brief questionnaire* on social comparison at the moment they become aware that they are engaging in *social comparison* during the *gambling activity*
+main effects:
 
-## Field study
+1. main effect of the domain
+2. main effect of amount of numbers*?*
+3. main effect of number distance*?*
 
-3. Self-recorded diary
-    2. recorded variables
-        1. "Type of social contact for this comparison"
-        2. "comparison dimension"
-        3. "Whom did you feel you compared with?"
-            1. e.g. immaginary or real person, oneself, close friend, etc.
-        4. Target's sex
-        5. "How similar are you to compared?"
-        6. feelings before and after comparison
-        7. "Please describe why you made this comparison with this
-particular person"
-        8. gain, loss or even domain
+. . .
+
+Interaction effects:
+
+1. domain X amount of numbers
+2. domain X number distance
+3. amount of numbers X number distance
+4. domain X amount of numbers X number distance
+
+. . .
+
+Position effects:
+
+1. Higher ranks predict less information sampling (and sampling time)
+2. position X amount of numbers
+3. position X number distance
+4. position X domain
 
 
-- instrument: Rochester Social Comparison Record [@wheeler1992social] (variables 1-7)
+. . .
 
-## Selection method?
+Psychological discomfort hypothesis:
 
-# Experimental design
+- more discomfort in the loss domain
+- Positive correlation between psychological discomfort and...
+  - modesty norm
+  - empathy
+  - social identity
+  - individual differences in social comparison
+  - political orientation: left-wing
+
+# Some problems
+
+1. I haven't looked at the information avoidance/seeking literature
+2. In the experiment non-information seeking and information avoidance aren't differentiated
+
 
 
 ## References

@@ -1,0 +1,44 @@
+/* Academic Blue */
+.highlight-blue-academic.visible {
+  color: #1f4e79;
+}
+
+/* Deep Teal */
+.highlight-teal.visible {
+  color: #1b6f6a;
+}
+
+/* Slate Gray */
+.highlight-slate.visible {
+  color: #2f4f4f;
+}
+
+/* Burgundy */
+.highlight-burgundy.visible {
+  color: #7a1e2c;
+}
+
+/* Indigo */
+.highlight-indigo.visible {
+  color: #3f51b5;
+}
+
+/* Dark Gold */
+.highlight-gold.visible {
+  color: #b58900;
+}
+
+/* Professional Purple */
+.highlight-purple.visible {
+  color: #5e548e;
+}
+
+/* Strong Emphasis (bold + darker) */
+.highlight-strong.visible {
+  color: #0d3b66;
+}
+
+/* Subtle Emphasis (almost monochrome) */
+.highlight-subtle.visible {
+  color: #555555;
+}
