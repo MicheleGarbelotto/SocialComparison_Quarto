@@ -228,7 +228,7 @@ No answer in the *social comparison* literature
 :::
 
 :::{.column}
-### Two concepts {.fragment}
+### Three concepts {.fragment}
 
 :::{.incremental}
 - reference dependence
@@ -241,6 +241,8 @@ No answer in the *social comparison* literature
   - ...
 
 - loss avversion
+
+- diminishing sensitivity
 :::
 
 :::
@@ -252,7 +254,7 @@ No answer in the *social comparison* literature
 
 ## Downward comparison hypothesis
 
-> Individuals in the loss domain will seek less comparison information if they compare downward
+> Individuals in the loss domain will seek less comparison information in the case of downward social comparison
 
 . . .
 
@@ -272,9 +274,11 @@ Downward social comparison $\rightarrow$ > psychological discomfort $\rightarrow
 - others?
 :::
 
-## Upward comparison hypothesis?
+## Upward comparison hypothesis
 
 > Is there a difference in upward social comparison?
+
+![](img\cow.png){.fade-in}
 
 
 # Experimental design
@@ -315,8 +319,9 @@ Experiment prototype ([link](SC_Exp1.html))
 | **Less distance**       | More numbers + less distance | Less numbers + less distance |
 
 Manipulating:
+
 - perceived probability of downward comparison
-- greater downward discrepancy may intensify discomfort about seeing others’ worse outcomes
+- discomfort about outcome discrepancy
 
 
 ## Experimental conditions
@@ -325,7 +330,7 @@ Manipulating:
 
 |                         | **More numbers** | **Less numbers** |
 |-------------------------|------------------|------------------|
-| **More distance**       | - €0€,  10€, - 20€, - 30€, - 40€ | - 0€, - 20€, - 40€ |
+| **More distance**       | - €0,  - 10€, - 20€, - 30€, - 40€ | - 0€, - 20€, - 40€ |
 | **Less distance**       | - 0€, - 5€, - 10€, - 15€, - 20€ | - 0€, - 10€, - 20€ |
 
 
@@ -355,26 +360,27 @@ The probability of sampling someone with a lower score is: **66.7%**
 
 ::::
 
-- greater downward discrepancy may intensify discomfort
-
 ## Dependent variables
 
+:::{.incremental}
 - number of social comparison information sampled
 - time spent on sampling information
 - psychological discomfort?
   - trial level
-    - post-sampling
-      - “How uncomfortable do you feel right now seeing the other participant’s outcomes?”
     - pre-sampling
       - “How uncomfortable would you feel after seeing the other participant’s outcomes?”
+    - post-sampling
+      - “How uncomfortable do you feel right now seeing the other participant’s outcomes?”
   - block level
     - "How uncomfortable on average have you felt?"
+    
+:::
     
 ## Other measurements
 
 - modesty norm
 - empathy
-- social identity: "when you were gambling in the loss scenario how much you identified with the group of participants?"
+- social identity: "How strongly did you feel identified with the group of participants while gambling in the loss scenario?"
 - individual differences in social comparison
 - political orientation
 - others?
