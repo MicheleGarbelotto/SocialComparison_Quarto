@@ -1,5 +1,5 @@
 ---
-title: "A social comparison analysis: differentiating loss and gain"
+title: "A social comparison analysis: differentiating losses and gains"
 author: 
     name: Michele Garbelotto
     email: garbelotto.michele@gmail.com
@@ -30,7 +30,7 @@ execute:
 
 ## Specific research question
 
-> Do individuals seek social comparison information differently in the loss domain compared to the gain domain?
+> Do individuals differ in their tendency to seek social comparison information when they are in the loss domain versus the gain domain?
 
 . . . 
 
@@ -102,6 +102,7 @@ The researcher won a grant of x€ < 1 mln
 - 700k
 - 600k
 - ...
+- 0€ 😔
 :::
 
 ## Gain domain
@@ -114,9 +115,42 @@ The researcher won a grant of x€ > 1 mln
 - 1,3 mln
 - 1.4 mln
 - ...
+- 100 bln 🥳
 :::
 
 :::
+
+## Prospect theory's gain function
+
+:::: {.columns}
+
+:::{.column}
+
+![@tversky1992advances](img\GainFunction.png){width=100%}
+
+:::
+
+:::{.column}
+### Three concepts {.fragment}
+
+:::{.incremental}
+- reference dependence
+  - goals
+  - expectations
+  - endowment of a gift
+  - current wealth
+  - counterfactuals
+  - social comparison
+  - ...
+
+- loss avversion
+
+- diminishing sensitivity
+:::
+
+:::
+
+::::
 
 ## General research question
 
@@ -138,7 +172,7 @@ Other specific research questions:
 ::: 
 
 
-# The "social comparison field"
+# The social comparison field
 
 
 ::: notes
@@ -216,45 +250,12 @@ No answer in the *social comparison* literature
 - [Dimensional Comparison Theory]{.fragment .highlight-blue} [@helm2020dimensional]
 - [Temporal Comparison Theory]{.fragment .highlight-blue} (Theoretical origin by @albert1977temporal; for a contemporary summary: @wilson2020temporal)
 
-# Prospect theory
-
-## The gain function
-
-:::: {.columns}
-
-:::{.column}
-
-![@tversky1992advances](img\GainFunction.png){width=100%}
-:::
-
-:::{.column}
-### Three concepts {.fragment}
-
-:::{.incremental}
-- reference dependence
-  - endowment of a gift
-  - current wealth
-  - expectations
-  - counterfactuals
-  - goals
-  - social comparison
-  - ...
-
-- loss avversion
-
-- diminishing sensitivity
-:::
-
-:::
-
-::::
-
 
 # The hypothesis
 
-## Downward comparison hypothesis
+## Downward comparison information avoidance hypothesis
 
-> Individuals in the loss domain will seek less comparison information in the case of downward social comparison
+> The greater the probability of engaging in downward social comparison, the less comparison information individuals in the loss domain will seek.
 
 . . .
 
@@ -274,13 +275,24 @@ Downward social comparison $\rightarrow$ > psychological discomfort $\rightarrow
 - others?
 :::
 
+### Derived hp {.fragment}
+
+::: {.fragment}
+
+> Individuals seek less comparison information in the loss domain.
+
+:::
+
 ## Upward comparison hypothesis
 
-> Is there a difference in upward social comparison?
+> Is there a difference in upward social comparison information seeking/avoidance?
 
-. . . 
+. . .
+
 
 ![](img\cow.png)
+
+![](img\GainFunction.png){width=100%}
 
 
 # Experimental design
@@ -290,11 +302,13 @@ Downward social comparison $\rightarrow$ > psychological discomfort $\rightarrow
 ::: {.incremental}
 
 - conditions within-subject 
-- 2 main blocks
+- 2 *main blocks*
   - loss domain
-    - point of reference for every trial: x€ 
+    - point of reference: x€ (> 0€)
+    - restart every trial form x€
   - win domain
-    - point of reference for every trial: 0€
+    - point of reference: 0€
+    - restart every trial from 0€
     
 :::
 
@@ -305,28 +319,38 @@ Downward social comparison $\rightarrow$ > psychological discomfort $\rightarrow
 Phases:
 
 1. roulette task
-2. comparison task
+2. sampling task 
 
-Experiment prototype ([link](SC_Exp1.html))
+Experiment *prototype* ([link](SC_Exp1.html))
 
 </div>
 
 
 
-## Experimental conditions
+## Sub-blocks
+
+. . .
+
+- numbers amount
+- numbers distance
+
+. . .
+
 
 |                         | **More numbers** | **Less numbers** |
 |-------------------------|------------------|------------------|
 | **More distance**       | More numbers + more distance | Less numbers + more distance |
 | **Less distance**       | More numbers + less distance | Less numbers + less distance |
 
+. . .
+
 Manipulating:
 
-- perceived probability of downward comparison
-- discomfort about outcome discrepancy
+- *perceived probability* of downward comparison
+- discomfort about outcome *discrepancy*
 
 
-## Experimental conditions
+## Sub-blocks
 
 ### Loss domain example
 
@@ -338,7 +362,9 @@ Manipulating:
 
 :::: {.columns}
 
-::: {.column .fragment data-fragment-index="1"}
+::: {.column}
+
+<div class="fragment" data-fragment-index="1">
 
 - [X] - 0€
 - [ ] - 10€
@@ -346,36 +372,74 @@ Manipulating:
 - [ ] - 30€
 - [ ] - 40€
 
+</div>
+
+<div class="fragment" data-fragment-index="3">
+
 The probability of sampling someone with a lower score is: **83.3%**
+
+</div>
 
 :::
 
-::: {.column .fragment data-fragment-index="2"}
+::: {.column}
+
+<div class="fragment" data-fragment-index="2">
 
 - [X] - 0€
 - [ ] - 20€ 
 - [ ] - 40€
 
+</div>
+
+<div class="fragment" data-fragment-index="4">
+
 The probability of sampling someone with a lower score is: **66.7%**
+
+</div>
 
 :::
 
 ::::
 
-## Dependent variables
+## Variables
 
-:::{.incremental}
-- number of social comparison information sampled
-- time spent on sampling information
-- psychological discomfort?
-  - trial level
-    - pre-sampling
-      - “How uncomfortable would you feel after seeing the other participant’s outcomes?”
-    - post-sampling
-      - “How uncomfortable do you feel right now seeing the other participant’s outcomes?”
-  - block level
-    - "How uncomfortable on average have you felt?"
-    
+<div class="fragment">
+
+### Independent variables
+
+1. main blocks
+2. sub-blocks
+3. *rank position*
+
+</div>
+
+<div class="fragment">
+
+### Dependent variables
+
+1. number of social comparison information sampled (*sampling number*)
+2. time spent on sampling information (*sampling time*)
+3. *psychological discomfort*
+
+</div>
+
+<div class="fragment">
+
+How should psychological discomfort be implemented?
+
+</div>
+
+::: {.incremental}
+
+- trial level
+  - pre-sampling
+    - “How uncomfortable would you feel after seeing the other participant’s outcomes?”
+  - post-sampling
+    - “How uncomfortable do you feel right now seeing the other participant’s outcomes?”
+- block level
+  - “How uncomfortable on average have you felt?”
+
 :::
     
 ## Other measurements
@@ -391,42 +455,85 @@ The probability of sampling someone with a lower score is: **66.7%**
 
 ## Hypothesis
 
-main effects:
+### DV: sampling time and sampling number {.incremental}
+
+<div class="fragment">
+
+Main effects:
 
 1. main effect of the domain
-2. main effect of amount of numbers**?**
-3. main effect of number distance**?**
+2. main effect of numbers amount**?**
+3. main effect of numbers distance
+4. main effect of rank position
 
-. . .
+</div>
 
-Interaction effects:
+<div class="fragment">
 
-1. domain X amount of numbers**?**
-2. domain X number distance**?**
-3. amount of numbers X number distance**?**
-4. domain X amount of numbers X number distance**?**
+Two-way interactions effects:
 
-. . .
+1. domain X number distance
+2. domain X rank position
+3. rank position X number distance
+4. amount of numbers X number distance**?**
+5. domain X amount of numbers**?**
 
-Position effects:
+</div>
 
-1. Higher ranks predict less information sampling (and sampling time)
-2. position X amount of numbers
-3. position X number distance
-4. position X domain
+<div class="fragment">
 
+Three-interactions effects:
 
-. . .
+1. domain X number distance X rank position
+2. ... **?**
 
-Psychological discomfort hypothesis:
+</div>
 
-- more discomfort in the loss domain
-- Positive correlation between psychological discomfort and...
-  - modesty norm
-  - empathy
-  - social identity
-  - individual differences in social comparison
-  - political orientation: left-wing
+## Hypothesis
+
+### DV: psychological discomfort {.incremental}
+
+<div class="fragment">
+
+Main effects:
+
+1. domain
+2. rank position
+3. numbers distance
+
+</div>
+
+<div class="fragment">
+
+Two-way interaction effects:
+
+1. rank position X numbers distance
+2. rank position X domain
+3. domain X numbers distance
+4. ... **?**
+
+</div>
+
+<div class="fragment">
+
+Three-way interaction effects:
+
+1. rank position X numbers distance X domain
+2. ...**?**
+
+</div>
+
+<div class="fragment">
+
+Some moderators:
+
+- modesty norm
+- empathy
+- social identity
+- individual differences in social comparison
+- political orientation: left-wing
+  
+</div>
 
 # Some problems
 
