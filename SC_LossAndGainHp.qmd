@@ -85,7 +85,7 @@ Prospect theory [@kahneman2013prospect]
 
 <div style="text-align:center;">
 
-![](img/researcher.jpg){width=60% .fragment}
+![Let's give her a random italian name: Francesca ](img/researcher.jpg){width=60% .fragment}
 
 </div>
 
@@ -120,6 +120,28 @@ The researcher won a grant of x€ > 1 mln
 
 :::
 
+## General research question
+
+> Is there a difference in social comparison between the loss domain and the gain domain?
+
+. . .
+
+Other specific research questions:
+
+::: {.incremental}
+
+- is there a difference in comparison preference between the two domains?
+
+- do the social comparison effects differ between the two domains?
+
+- is there a difference in how people downplay their performance between the two domains? 
+  - Sensitivity about being the target of a threatening upward comparison (STTUC) [@exline1999perils]
+
+::: 
+
+
+# Prospect Theory
+
 ## Prospect theory's gain function
 
 :::: {.columns}
@@ -152,38 +174,18 @@ The researcher won a grant of x€ > 1 mln
 
 ::::
 
-## General research question
-
-> Is there a difference in social comparison between the loss domain and the gain domain?
-
-. . .
-
-Other specific research questions:
-
-::: {.incremental}
-
-- is there a difference in comparison preference between the two domains?
-
-- do the social comparison effects differ between the two domains?
-
-- is there a difference in how people downplay their performance between the two domains? 
-  - Sensitivity about being the target of a threatening upward comparison (STTUC) [@exline1999perils]
-
-::: 
-
-
-# The social comparison field
+# What is social comparison?
 
 
 ::: notes
 Buunk and Gibbons 2007
 :::
 
-## What is "social comparison"?
+## Definition
 
-"[Social comparison is] the process of thinking about information about one or more person in relation to the self" [@wood1996, pp. 520–521].
+"[Social comparison is] the process of *thinking* about information about one or more person in relation to the *self*" [@wood1996, pp. 520–521].
 
-"the cognitive process of evaluating a certain target by comparing it to a certain standard", "social comparisons use information on others as the standard"^[A standard is the person/s to which the individual is comparing to, while a target is a self-attribute] [@moller2016generalized].
+"the *cognitive process* of *evaluating* a certain target by comparing it to a certain standard", "social comparisons use information on *others* as the standard"^[A standard is the person/s to which the individual is comparing to, while a target is a self-attribute] [@moller2016generalized].
 
 . . .
 
@@ -191,16 +193,15 @@ Buunk and Gibbons 2007
 
 ::: {.incremental}
 
-1. centrality of self-attributes
-2. evaluation of a target
-  1. self-evaluation as a dependent variable [@wheeler2020history]
-3. uncertainty drive [@wheeler2020history]
+1. cognitive process
+2. centrality of self-attributes
+3. evaluation of a target
+    1. self-evaluation as a dependent variable [@wheeler2020history]
+4. uncertainty drive [@wheeler2020history]
 
 ::: 
 
-## What is "social comparison"?
-
-### Some core concepts of social comparison
+## Some core concepts of social comparison
 
 1.  type of standard
 2.  comparison dimension
@@ -213,27 +214,15 @@ Buunk and Gibbons 2007
 
 See @arigo2020^[They use the term "identification", instead of "assimilation", and "target" instead of "standard".]
 
-## What isn't social comparison^[@wheeler2020history]
-
-1. comparative conclusions (not social comparison: @wood1985social)
-2. counterfactuals
-3. better than average effect
-4. false consensus effect
+## Is there an answer to the research question in the social comparison literature?
 
 . . .
 
-### so...
-
-1. the comparative process has to be present
-2. there has to be a comparison feedback
-3. importance of self-evaluation
-
-
-## Is there an answer to the research question based on the social comparison field?
+> Do individuals differ in their tendency to seek social comparison information when they are in the loss domain versus the gain domain?
 
 . . .
 
-No answer in the *social comparison* literature
+**NO**.
 
 . . .
 
@@ -260,7 +249,7 @@ No answer in the *social comparison* literature
 
 ## Downward comparison information avoidance hypothesis
 
-> The greater the probability of engaging in downward social comparison, the less comparison information individuals in the loss domain will seek.
+> Individuals in the loss domain seek less downward social comparison information. 
 
 . . .
 
@@ -290,7 +279,7 @@ Downward social comparison $\rightarrow$ > psychological discomfort $\rightarrow
 
 ## Upward comparison hypothesis
 
-> Is there a difference in upward social comparison information seeking/avoidance?
+> Is there a difference in upward social comparison information seeking/avoidance between the two domains?
 
 . . .
 
@@ -304,18 +293,37 @@ Downward social comparison $\rightarrow$ > psychological discomfort $\rightarrow
 
 ## Experimental conditions
 
+:::: {.columns}
+
+::: {.column}
+
+<div class="fragment" style="text-align: center;">
+  <img src="img/roulette.jpg" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+  <p style="margin-top: 0.4em; font-size: 0.8em;">
+    <em>Experiment prototype</em> (<a href="SC_Exp1.html">link</a>)
+  </p>
+</div>
+
+:::
+
+::: {.column}
+
 ::: {.incremental}
 
-- conditions within-subject 
+- within-subject design
 - 2 *main blocks*
   - loss domain
     - point of reference: x€ (> 0€)
-    - restart every trial form x€
+    - restart every trial from x€
   - win domain
     - point of reference: 0€
     - restart every trial from 0€
-    
+
 :::
+
+:::
+
+::::
 
 <div class="fragment">
 
@@ -325,8 +333,6 @@ Phases:
 
 1. roulette task
 2. sampling task 
-
-Experiment *prototype* ([link](SC_Exp1.html))
 
 </div>
 
@@ -424,8 +430,9 @@ The probability of sampling someone with a lower score is: **66.7%**
 ### Dependent variables
 
 1. number of social comparison information sampled (*sampling number*)
-2. time spent on sampling information (*sampling time*)
+2. time spent on sampling information (*sampling time*) (or reaction time?)
 3. *psychological discomfort*
+4. other?
 
 </div>
 
@@ -447,11 +454,11 @@ How should psychological discomfort be implemented?
 
 :::
     
-## Moderators
+## Other measurements
 
 <div class="fragment">
 
-- modesty norm
+- modesty norm: "how much do you think modesty is important from 1 to 10"
 - empathy
 - social identity: "How strongly did you feel identified with the group of participants while gambling in the loss scenario?"
 - individual differences in social comparison
@@ -462,45 +469,11 @@ How should psychological discomfort be implemented?
 
 </div>
 
-## Hypothesis
+## Hypothesis^[The dependent variables are: sampling number, sampling time, psychological discomfort]
 
-### DV: sampling time and sampling number {.incremental}
+:::: {.columns}
 
-<div class="fragment">
-
-Main effects:
-
-1. main effect of the domain
-2. main effect of numbers amount**?**
-3. main effect of numbers distance
-4. main effect of rank position
-
-</div>
-
-<div class="fragment">
-
-Two-way interactions effects:
-
-1. domain X number distance
-2. domain X rank position
-3. rank position X number distance
-4. amount of numbers X number distance**?**
-5. domain X amount of numbers**?**
-
-</div>
-
-<div class="fragment">
-
-Three-interactions effects:
-
-1. domain X number distance X rank position
-2. ... **?**
-
-</div>
-
-## Hypothesis
-
-### DV: psychological discomfort {.incremental}
+::: {.column}
 
 <div class="fragment">
 
@@ -509,6 +482,7 @@ Main effects:
 1. domain
 2. rank position
 3. numbers distance
+4. numbers amount**?**
 
 </div>
 
@@ -519,9 +493,13 @@ Two-way interaction effects:
 1. rank position X numbers distance
 2. rank position X domain
 3. domain X numbers distance
-4. ... **?**
+4. ...**?**
 
 </div>
+
+::: 
+
+::: {.column}
 
 <div class="fragment">
 
@@ -534,7 +512,7 @@ Three-way interaction effects:
 
 <div class="fragment">
 
-Moderators:
+Moderators of psychological discomfort:
 
 - modesty norm
 - empathy
@@ -543,6 +521,10 @@ Moderators:
 - political orientation
   
 </div>
+
+:::
+
+::::
 
 # Some problems
 
