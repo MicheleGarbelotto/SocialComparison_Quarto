@@ -189,10 +189,14 @@ Buunk and Gibbons 2007
 
 ### Necessary conditions of social comparison as a theory
 
+::: {.incremental}
+
 1. centrality of self-attributes
 2. evaluation of a target
   1. self-evaluation as a dependent variable [@wheeler2020history]
 3. uncertainty drive [@wheeler2020history]
+
+::: 
 
 ## What is "social comparison"?
 
@@ -537,8 +541,14 @@ Some moderators:
 
 # Some problems
 
-1. I haven't looked at the information avoidance/seeking literature
-2. Non-information seeking and information avoidance aren't differentiated
+- I haven't looked long enough at 
+  - the information avoidance/seeking literature
+    - contemporary information seeking model: PRISM
+    - contemporary information avoidance model: PRIA
+    - contemporary information seeking-avoidance framework: 
+  - Prospect Theory's literature
+- Exp.
+  - Not seeking information vs information avoidance
 
 
 
