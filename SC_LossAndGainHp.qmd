@@ -181,9 +181,9 @@ Buunk and Gibbons 2007
 
 ## What is "social comparison"?
 
-"[social comparison is] the process of thinking about information about one or more person in relation to the self" [@wood1996, pp. 520–521]
+"[Social comparison is] the process of thinking about information about one or more person in relation to the self" [@wood1996, pp. 520–521].
 
-"the cognitive process of evaluating a certain target by comparing it to a certain standard", "social comparisons use information on others as the standard"^[A standard is the person/s to which the individual is comparing to, while a target is a self-attribute] [@moller2016generalized]
+"the cognitive process of evaluating a certain target by comparing it to a certain standard", "social comparisons use information on others as the standard"^[A standard is the person/s to which the individual is comparing to, while a target is a self-attribute] [@moller2016generalized].
 
 . . .
 
@@ -215,7 +215,7 @@ See @arigo2020^[They use the term "identification", instead of "assimilation", a
 
 ## What isn't social comparison^[@wheeler2020history]
 
-1. comparative conclusions
+1. comparative conclusions (not social comparison: @wood1985social)
 2. counterfactuals
 3. better than average effect
 4. false consensus effect
@@ -226,6 +226,7 @@ See @arigo2020^[They use the term "identification", instead of "assimilation", a
 
 1. the comparative process has to be present
 2. there has to be a comparison feedback
+3. importance of self-evaluation
 
 
 ## Is there an answer to the research question based on the social comparison field?
@@ -437,25 +438,29 @@ How should psychological discomfort be implemented?
 ::: {.incremental}
 
 - trial level
-  - pre-sampling
+  - pre-sampling (anticipated discomfort)
     - “How uncomfortable would you feel after seeing the other participant’s outcomes?”
-  - post-sampling
+  - post-sampling 
     - “How uncomfortable do you feel right now seeing the other participant’s outcomes?”
 - block level
   - “How uncomfortable on average have you felt?”
 
 :::
     
-## Other measurements
+## Moderators
+
+<div class="fragment">
 
 - modesty norm
 - empathy
 - social identity: "How strongly did you feel identified with the group of participants while gambling in the loss scenario?"
 - individual differences in social comparison
 - political orientation
+- general demographic information
 - others?
 
-- demographic information
+
+</div>
 
 ## Hypothesis
 
@@ -529,26 +534,26 @@ Three-way interaction effects:
 
 <div class="fragment">
 
-Some moderators:
+Moderators:
 
 - modesty norm
 - empathy
 - social identity
 - individual differences in social comparison
-- political orientation: left-wing
+- political orientation
   
 </div>
 
 # Some problems
 
-- I haven't looked long enough at 
+- i haven't looked long enough at...
   - the information avoidance/seeking literature
-    - contemporary information seeking model: PRISM
-    - contemporary information avoidance model: PRIA
-    - contemporary information seeking-avoidance framework: 
+    - a contemporary information seeking models: PRISM [@kahlor2010prism]
+    - a contemporary information avoidance models: PRIA [@deline2019planned]
+    - a contemporary information seeking-avoidance framework [@sharot2020people]
   - Prospect Theory's literature
-- Exp.
-  - Not seeking information vs information avoidance
+- exp.
+  - not seeking information vs information avoidance [@foust2025information]
 
 
 
