@@ -2,13 +2,13 @@
 title: "Social Comparison Project"
 author: Michele Garbelotto
 date: today
-format: 
+format:
   html:
     self-contained: true
-    toc: true                 
-    toc-location: left      
+    toc: true    
+    toc-location: left
     theme:
-      light: minty 
+      light: minty
       dark: superhero
 ---
 
@@ -16,4 +16,4 @@ format:
 
 [Literature review and experimental designs](SC_Presentation.html)
 
-[Loss and gain in social comparison](SC_LossAndGainHp.html)
+[Losses and gains in social comparison](SC_LossAndGainHp.html)
