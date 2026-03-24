@@ -142,7 +142,7 @@ Other specific research questions:
 
 # Prospect Theory
 
-## Prospect theory's gain function
+## Prospect theory's value function
 
 :::: {.columns}
 
@@ -239,7 +239,7 @@ See @arigo2020^[They use the term "identification", instead of "assimilation", a
 - local vs general comparison [@zell2020better; @zell2020effects]
 - vertical vs horizontal comparison $\leftrightarrow$ agentic and communal motives [@locke2014agency]
 - Social Comparison Orientation [@gibbons1999individual]
-- [Social Identity Theory]{.fragment .highlight-blue} and Self Categorization Theory (for a brief description see @trepte2017social)
+- Social Identity Theory and Self Categorization Theory (for a brief description see @trepte2017social)
 - [Self-Evaluation Maintenance model]{.fragment .highlight-blue} (SEM) [@tesser1988toward]
 - [Dimensional Comparison Theory]{.fragment .highlight-blue} [@helm2020dimensional]
 - [Temporal Comparison Theory]{.fragment .highlight-blue} (Theoretical origin by @albert1977temporal; for a contemporary summary: @wilson2020temporal)

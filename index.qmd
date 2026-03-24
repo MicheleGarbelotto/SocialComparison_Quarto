@@ -17,3 +17,5 @@ format:
 [Literature review and experimental designs](SC_Presentation.html)
 
 [Losses and gains in social comparison](SC_LossAndGainHp.html)
+
+[3 slides: hp, experimental design and expected results](SC_3slides.html)
