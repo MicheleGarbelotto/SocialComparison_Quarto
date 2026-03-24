@@ -34,7 +34,7 @@ execute:
 
 . . .
 
-An question: is there a difference in the direction of comparison between the two domains?
+An exploratory question: is there a difference in the direction of comparison between the two domains?
 
 # Experimental design
 :::: {.columns}
